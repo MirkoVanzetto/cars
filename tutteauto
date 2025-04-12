@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Fiat Panda",
+    "price": 12000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "#fiat-panda",
+    "brand": "Fiat"
+  },
+  {
+    "name": "Volkswagen Golf",
+    "price": 27000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "https://sites.google.com/view/carsellingss/singola",
+    "brand": "Volkswagen"
+  },
+  {
+    "name": "BMW Serie 3",
+    "price": 42000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "#bmw-serie-3",
+    "brand": "BMW"
+  },
+  {
+    "name": "Tesla Model 3",
+    "price": 50000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "#tesla-model-3",
+    "brand": "Tesla"
+  },
+  {
+    "name": "Renault Clio",
+    "price": 16000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "#renault-clio",
+    "brand": "Renault"
+  },
+  {
+    "name": "Audi A4",
+    "price": 38000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
+    "pageUrl": "#audi-a4",
+    "brand": "Audi"
+  }
+]
