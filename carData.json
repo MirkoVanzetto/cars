@@ -1,0 +1,27 @@
+{
+  "name": "Tesla Model S",
+  "price": "€90,000",
+  "mainImage": "https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/eghq9ct3evxunl27bkhl.jpg",
+  "description": "Tesla Model S è un'auto elettrica di lusso con performance incredibili e design futuristico.",
+  "specs": {
+    "km": "15,000 km",
+    "year": "2023",
+    "fuel": "Elettrico",
+    "power": "670 CV",
+    "transmission": "Automatico",
+    "doors": "4 porte",
+    "emission": "0 g/km CO2",
+    "weight": "2,100 kg"
+  },
+  "exterior": {
+    "color": "Bianco",
+    "interior": "Pelle nera",
+    "warranty": "Garanzia 5 anni",
+    "smoker": "Non fumatori"
+  },
+  "images": [
+    "https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/eghq9ct3evxunl27bkhl.jpg",
+    "https://api.freelogodesign.org/assets/blog/thumb/80d93389837d493b80e9f4f2ca3a48ad_1176x840.jpg",
+    "https://www.ansa.it/webimages/news_base/2024/8/23/0af07894f63f64bdc6484b10e677198.jpg"
+  ]
+}
