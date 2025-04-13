@@ -2,7 +2,7 @@
   {
     "name": "Fiat Panda",
     "price": 12000,
-    "imageUrl": "https://github.com/MirkoVanzetto/cars/blob/main/auto1/bg-banner29.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/bg-banner29.jpg",
     "pageUrl": "#fiat-panda",
     "brand": "Fiat"
   },
