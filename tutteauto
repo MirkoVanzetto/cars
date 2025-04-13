@@ -41,5 +41,4 @@
     "pageUrl": "#audi-a4",
     "brand": "Audi"
   }
-{"name":"lambo lambo","pageUrl":"asd","brand":"negga","price":"342323","discountPrice":"","sold":false,"imageUrl":"https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/bg-banner29.jpg","description":"aaaaa","specs":{"km":"11","year":"2022","fuel":"diesel","power":"249 kw","transmission":"2","doors":"4","emission":"241","weight":"3245"},"exterior":{"color":"blu","interior":"nessuno","warranty":"amazon","smoker":"turchish"},"images":["https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/bg-banner29.jpg"],"features":{"autonomousDriving":"true","infotainment":"true","soundSystem":"jbl","wheels":"lega 32","charging":"42"},"contact":{"dealer":"si","phone":"4353","email":"jfgdjg","location":"dfisfs"}}
 ]
