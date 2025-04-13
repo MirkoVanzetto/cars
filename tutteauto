@@ -4,41 +4,53 @@
     "price": 12000,
     "imageUrl": "https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/bg-banner29.jpg",
     "pageUrl": "#fiat-panda",
-    "brand": "Fiat"
+    "brand": "Fiat",
+    "inserimento": "2025-04-10",
+    "chilometraggio": 55000
   },
   {
     "name": "Tesla qualcosa",
     "price": 27000,
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "singola",
-    "brand": "Volkswagen"
+    "brand": "Volkswagen",
+    "inserimento": "2025-03-22",
+    "chilometraggio": 30000
   },
   {
     "name": "BMW Serie 3",
     "price": 42000,
     "imageUrl": "https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/veyron-ss-speed-record-press-photo-1654631122.jpg",
     "pageUrl": "#bmw-serie-3",
-    "brand": "BMW"
+    "brand": "BMW",
+    "inserimento": "2025-04-01",
+    "chilometraggio": 45000
   },
   {
     "name": "Tesla Model 3",
     "price": 50000,
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "#tesla-model-3",
-    "brand": "Tesla"
+    "brand": "Tesla",
+    "inserimento": "2025-04-05",
+    "chilometraggio": 15000
   },
   {
     "name": "Renault Clio",
     "price": 16000,
     "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/veyron-ss-speed-record-press-photo-1654631122.jpg",
     "pageUrl": "#renault-clio",
-    "brand": "Renault"
+    "brand": "Renault",
+    "inserimento": "2025-03-30",
+    "chilometraggio": 62000
   },
   {
     "name": "Audi A4",
     "price": 38000,
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "#audi-a4",
-    "brand": "Audi"
+    "brand": "Audi",
+    "inserimento": "2025-04-08",
+    "chilometraggio": 39000
   }
 ]
