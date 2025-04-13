@@ -52,5 +52,13 @@
     "brand": "Audi",
     "insertDate": "2025-03-28T10:00:00Z",
     "km": 18000
+  }, {
+    "name": "Mufasa re della giungla",
+    "price": 76858,
+    "imageUrl": "https://blog.fivemods.io/storage/2025/01/Grand-Theft-Auto-V-Screenshot-2024.10.29-20.06.47.37-1300x650.png",
+    "pageUrl": "none",
+    "brand": "Lambo",
+    "insertDate": "2025-04-13T23:30:00.000Z",
+    "km": 20950
   }
 ]
