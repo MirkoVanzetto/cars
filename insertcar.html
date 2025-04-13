@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestione Auto</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #111;
+      color: #eee;
+    }
+    h1, h2 {
+      color: #00bfff;
+    }
+    .car-card {
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #222;
+      border-radius: 8px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    input, textarea {
+        width: 80%; /* o anche 70% */
+        max-width: 500px;
+      padding: 6px;
+      background: #333;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #00bfff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .export-btn {
+      margin-top: 20px;
+    }
+    textarea {
+      height: 100px;
+    }
+    .form-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Auto in Vendita</h1>
+  <div id="car-list"></div>
+
+  <h2>Aggiungi una nuova auto</h2>
+  <form id="car-form" class="form-container">
+    <div class="form-group"><input type="text" id="name" placeholder="Nome (es. Tesla Model S)" required /></div>
+    <div class="form-group"><input type="text" id="pageUrl" placeholder="URL pagina (es. singola)" required /></div>
+    <div class="form-group"><input type="text" id="brand" placeholder="Marca" required /></div>
+    <div class="form-group"><input type="text" id="price" placeholder="Prezzo (es. €90,000)" required /></div>
+    <div class="form-group"><input type="text" id="discountPrice" placeholder="Prezzo scontato (es. €85,000)" /></div>
+    <div class="form-group"><input type="text" id="mainImage" placeholder="URL immagine principale" required /></div>
+    <div class="form-group"><textarea id="description" placeholder="Descrizione"></textarea></div>
+
+    <h3>Specifiche</h3>
+    <div class="form-group"><input type="text" id="km" placeholder="Chilometri (es. 15,000 km)" /></div>
+    <div class="form-group"><input type="text" id="year" placeholder="Anno" /></div>
+    <div class="form-group"><input type="text" id="fuel" placeholder="Carburante" /></div>
+    <div class="form-group"><input type="text" id="power" placeholder="Potenza" /></div>
+    <div class="form-group"><input type="text" id="transmission" placeholder="Trasmissione" /></div>
+    <div class="form-group"><input type="text" id="doors" placeholder="Porte" /></div>
+    <div class="form-group"><input type="text" id="emission" placeholder="Emissioni" /></div>
+    <div class="form-group"><input type="text" id="weight" placeholder="Peso" /></div>
+
+    <h3>Esterni</h3>
+    <div class="form-group"><input type="text" id="color" placeholder="Colore esterno" /></div>
+    <div class="form-group"><input type="text" id="interior" placeholder="Interni" /></div>
+    <div class="form-group"><input type="text" id="warranty" placeholder="Garanzia" /></div>
+    <div class="form-group"><input type="text" id="smoker" placeholder="Fumatori / Non fumatori" /></div>
+
+    <h3>Immagini aggiuntive (separate da virgole)</h3>
+    <div class="form-group"><textarea id="images" placeholder="URL immagini separate da virgola"></textarea></div>
+
+    <h3>Features</h3>
+    <div class="form-group"><input type="text" id="autonomousDriving" placeholder="Guida autonoma" /></div>
+    <div class="form-group"><input type="text" id="infotainment" placeholder="Infotainment" /></div>
+    <div class="form-group"><input type="text" id="soundSystem" placeholder="Sistema audio" /></div>
+    <div class="form-group"><input type="text" id="wheels" placeholder="Cerchi" /></div>
+    <div class="form-group"><input type="text" id="charging" placeholder="Ricarica" /></div>
+
+    <h3>Contatto</h3>
+    <div class="form-group"><input type="text" id="dealer" placeholder="Concessionario" /></div>
+    <div class="form-group"><input type="text" id="phone" placeholder="Telefono" /></div>
+    <div class="form-group"><input type="text" id="email" placeholder="Email" /></div>
+    <div class="form-group"><input type="text" id="location" placeholder="Indirizzo" /></div>
+
+    <button type="submit">Aggiungi Auto</button>
+  </form>
+
+  <button class="export-btn" onclick="exportJSON()">📦 Esporta JSON</button>
+
+   <!-- Form ridotto -->
+   <div style="flex: 1; min-width: 300px;">
+    <h2>Inserimento auto ridotto</h2>
+    <form id="simple-car-form">
+      <div class="form-group"><input type="text" id="s_name" placeholder="Nome" required></div>
+      <div class="form-group"><input type="number" id="s_price" placeholder="Prezzo" required></div>
+      <div class="form-group"><input type="text" id="s_imageUrl" placeholder="URL Immagine" required></div>
+      <div class="form-group"><input type="text" id="s_pageUrl" placeholder="URL Pagina" required></div>
+      <div class="form-group"><input type="text" id="s_brand" placeholder="Marca" required></div>
+      <div class="form-group"><input type="datetime-local" id="s_insertDate" required></div>
+      <div class="form-group"><input type="number" id="s_km" placeholder="Chilometri" required></div>
+      <button type="submit">Aggiungi Auto Ridotta</button>
+    </form>
+
+    <button class="export-btn" onclick="exportSimpleJSON()">📤 Esporta JSON Ridotto</button>
+  </div>
+</div>
+
+
+  <script>
+    const url = 'https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/tutteauto';
+
+    async function loadCars() {
+      const res = await fetch(url);
+      const remoteCars = await res.json();
+      const local = localStorage.getItem('localCars');
+      const localCars = local ? JSON.parse(local) : [];
+      return [...remoteCars, ...localCars];
+    }
+
+    function displayCars(cars) {
+      const container = document.getElementById('car-list');
+      container.innerHTML = '';
+      cars.forEach(car => {
+        const card = document.createElement('div');
+        card.className = 'car-card';
+        card.innerHTML = `
+          <h3>${car.name} (${car.brand})</h3>
+          <p>${car.description}</p>
+          <img src="${car.imageUrl}" style="max-width:300px;height:auto;border-radius:8px;" />
+
+          <p>Prezzo: <strong>${car.price}</strong> ${
+            car.discountPrice ? ` → <strong style="color:lightgreen">${car.discountPrice}</strong>` : ''
+          }</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function exportJSON() {
+      const local = localStorage.getItem('localCars');
+      if (!local) {
+        alert('Nessuna auto locale da esportare.');
+        return;
+      }
+      const blob = new Blob([local], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'tutteauto-modificate.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function exportSimpleJSON() {
+      const simple = JSON.parse(localStorage.getItem('simpleCars') || '[]');
+      if (simple.length === 0) {
+        alert('Nessuna auto ridotta trovata.');
+        return;
+      }
+      const blob = new Blob([JSON.stringify(simple, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'auto-ridotte.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById('car-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const get = id => document.getElementById(id).value;
+
+      const car = {
+        name: get('name'),
+        pageUrl: get('pageUrl'),
+        brand: get('brand'),
+        price: get('price'),
+        discountPrice: get('discountPrice'),
+        sold: false,
+        mainImage: get('mainImage'),
+        description: get('description'),
+        specs: {
+          km: get('km'),
+          year: get('year'),
+          fuel: get('fuel'),
+          power: get('power'),
+          transmission: get('transmission'),
+          doors: get('doors'),
+          emission: get('emission'),
+          weight: get('weight')
+        },
+        exterior: {
+          color: get('color'),
+          interior: get('interior'),
+          warranty: get('warranty'),
+          smoker: get('smoker')
+        },
+        images: get('images').split(',').map(x => x.trim()),
+        features: {
+          autonomousDriving: get('autonomousDriving'),
+          infotainment: get('infotainment'),
+          soundSystem: get('soundSystem'),
+          wheels: get('wheels'),
+          charging: get('charging')
+        },
+        contact: {
+          dealer: get('dealer'),
+          phone: get('phone'),
+          email: get('email'),
+          location: get('location')
+        }
+      };
+
+      const existing = JSON.parse(localStorage.getItem('localCars') || '[]');
+      existing.push(car);
+      localStorage.setItem('localCars', JSON.stringify(existing));
+      displayCars([...carsOnline, ...existing]);
+      e.target.reset();
+    });
+
+    
+    document.getElementById('simple-car-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const get = id => document.getElementById(id).value;
+
+      const car = {
+        name: get('s_name'),
+        price: parseFloat(get('s_price')),
+        imageUrl: get('s_imageUrl'),
+        pageUrl: get('s_pageUrl'),
+        brand: get('s_brand'),
+        insertDate: new Date(get('s_insertDate')).toISOString(),
+        km: parseInt(get('s_km'))
+      };
+
+      const simple = JSON.parse(localStorage.getItem('simpleCars') || '[]');
+      simple.push(car);
+      localStorage.setItem('simpleCars', JSON.stringify(simple));
+      displayCars([...carsOnline, ...JSON.parse(localStorage.getItem('localCars') || '[]'), ...simple]);
+      e.target.reset();
+    });
+
+    let carsOnline = [];
+    loadCars().then(cars => {
+      carsOnline = cars;
+      displayCars(cars);
+    });
+  </script>
+</body>
+</html>
