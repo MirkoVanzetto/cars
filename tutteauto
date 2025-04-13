@@ -5,8 +5,8 @@
     "imageUrl": "https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/bg-banner29.jpg",
     "pageUrl": "#fiat-panda",
     "brand": "Fiat",
-    "inserimento": "2025-04-10",
-    "chilometraggio": 55000
+    "insertDate": "2025-04-12T10:00:00Z",
+    "km": 35000
   },
   {
     "name": "Tesla qualcosa",
@@ -14,8 +14,8 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "singola",
     "brand": "Volkswagen",
-    "inserimento": "2025-03-22",
-    "chilometraggio": 30000
+    "insertDate": "2025-04-10T10:00:00Z",
+    "km": 8000
   },
   {
     "name": "BMW Serie 3",
@@ -23,8 +23,8 @@
     "imageUrl": "https://raw.githubusercontent.com/MirkoVanzetto/cars/refs/heads/main/auto1/veyron-ss-speed-record-press-photo-1654631122.jpg",
     "pageUrl": "#bmw-serie-3",
     "brand": "BMW",
-    "inserimento": "2025-04-01",
-    "chilometraggio": 45000
+    "insertDate": "2025-03-15T10:00:00Z",
+    "km": 20000
   },
   {
     "name": "Tesla Model 3",
@@ -32,8 +32,8 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "#tesla-model-3",
     "brand": "Tesla",
-    "inserimento": "2025-04-05",
-    "chilometraggio": 15000
+    "insertDate": "2025-04-01T10:00:00Z",
+    "km": 10000
   },
   {
     "name": "Renault Clio",
@@ -41,8 +41,8 @@
     "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/veyron-ss-speed-record-press-photo-1654631122.jpg",
     "pageUrl": "#renault-clio",
     "brand": "Renault",
-    "inserimento": "2025-03-30",
-    "chilometraggio": 62000
+    "insertDate": "2025-04-13T10:00:00Z",
+    "km": 5000
   },
   {
     "name": "Audi A4",
@@ -50,7 +50,7 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Geneva_MotorShow_2013_-_Lamborghini_Veneno_1.jpg",
     "pageUrl": "#audi-a4",
     "brand": "Audi",
-    "inserimento": "2025-04-08",
-    "chilometraggio": 39000
+    "insertDate": "2025-03-28T10:00:00Z",
+    "km": 18000
   }
 ]
