@@ -2,7 +2,7 @@
   "name": "Tesla Model S",
   "price": "€90,000",
     "discountPrice": "€85,000",
-  "sold": true,
+  "sold": false,
   "mainImage": "https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/eghq9ct3evxunl27bkhl.jpg",
   "description": "Tesla Model S è un'auto elettrica di lusso con performance incredibili e design futuristico.",
   "specs": {
