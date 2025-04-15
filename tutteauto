@@ -60,5 +60,13 @@
     "brand": "Lambo",
     "insertDate": "2025-04-13T23:30:00.000Z",
     "km": 20950
+  }, {
+    "name": "ALE GAY",
+    "price": 543534,
+    "imageUrl": "https://www.digitaltrends.com/wp-content/uploads/2020/08/ocelot-pariah-gta-5.jpg",
+    "pageUrl": "none",
+    "brand": "Maserti",
+    "insertDate": "2025-04-15T12:53:00.000Z",
+    "km": 13342
   }
 ]
