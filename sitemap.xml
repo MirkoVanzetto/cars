@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/chi-sono</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/ikonica-studio</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/competenze</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/i-miei-progetti</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/football-miners</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/storyline</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mirkovanzetto.it/contatti</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
